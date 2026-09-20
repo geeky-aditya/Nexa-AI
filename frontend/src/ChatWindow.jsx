@@ -57,7 +57,7 @@ function ChatWindow() {
         }
         try {
             const response = await fetch(
-                "http://localhost:8080/api/chat",
+                "https://nexa-ai-q9xv.onrender.com/api/chat",
                 options
             );
 

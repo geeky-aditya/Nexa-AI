@@ -20,7 +20,7 @@ function Login({ onClose, onSwitchToSignup }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/login",
+                "https://nexa-ai-q9xv.onrender.com/api/login",
                 {
                     method: "POST",
 
