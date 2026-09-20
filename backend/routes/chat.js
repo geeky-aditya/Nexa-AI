@@ -224,6 +224,10 @@ router.delete("/thread/:threadId", authMiddleware, async(req,res)=>{
 router.post("/chat", optionalAuthMiddleware, async(req,res)=>{
 
     const {threadId, message} = req.body;
+    console.log("CHAT ROUTE HIT");
+    console.log("threadId:", threadId);
+    console.log("message:", message);
+    console.log("user:", req.user);
 
     if(!threadId || !message){
         return res.status(400).json({
