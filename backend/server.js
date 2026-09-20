@@ -13,6 +13,10 @@ app.use(cors());
 app.use("/api",chatRoutes);
 app.use("/api", authRoutes);
 
+app.get("/",(req,res)=>{
+  res.send("backend is working");
+})
+
 app.listen(PORT,"0.0.0.0",()=>{
   console.log(`app is listening to ${PORT} port`);
   connectDB();
