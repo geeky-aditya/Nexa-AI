@@ -1,0 +1,189 @@
+.authOverlay {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.authCard {
+    width: 400px;
+    max-width: 90%;
+
+    background-color: #171717;
+
+    border: 1px solid #333;
+    border-radius: 16px;
+
+    padding: 32px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    color: #aaa;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.closeBtn:hover {
+    color: white;
+}
+
+.authHeader {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.authHeader h2 {
+    margin: 0;
+
+    color: #ececec;
+
+    font-size: 25px;
+}
+
+.authHeader p {
+    margin-top: 8px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.formGroup {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+
+.formGroup label {
+    color: #d4d4d4;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.formGroup input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid #3a3a3a;
+
+    background-color: #212121;
+
+    color: #ececec;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.formGroup input::placeholder {
+    color: #777;
+}
+
+.formGroup input:focus {
+    border-color: #666;
+}
+
+.authBtn {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #ececec;
+
+    color: #171717;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.authBtn:hover {
+    background-color: #ffffff;
+}
+
+.switchAuth {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-top: 22px;
+}
+
+.switchAuth button {
+    border: none;
+
+    background: transparent;
+
+    color: #8ab4f8;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    margin-left: 5px;
+}
+
+.switchAuth button:hover {
+    text-decoration: underline;
+}
+
+.authError {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.authSuccess {
+    color: #4ade80;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.authBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
