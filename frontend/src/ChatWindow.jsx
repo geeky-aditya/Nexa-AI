@@ -1,4 +1,4 @@
-import { useContext, useState,useEffect} from "react";
+import { useContext, useState,useEffect,useRef} from "react";
 import { MyContext } from "./MyContext.jsx";
 import { AuthContext } from "./AuthContext.jsx";
 import { ScaleLoader } from "react-spinners";
@@ -16,7 +16,7 @@ function ChatWindow() {
     // User dropdown state
     const [showMenu, setShowMenu] = useState(false);
     const { user, token, logout } = useContext(AuthContext);
-    
+    const previousUser = useRef(user);
 
     // Context values
     const {
@@ -74,12 +74,25 @@ function ChatWindow() {
         setLoading(false);
     };
     useEffect(() => {
-    if (!user) {
+
+    // Guest -> Logged-in user
+    if (!previousUser.current && user) {
         setPrevChats([]);
         setReply(null);
         setPrompt("");
         setNewChat(true);
     }
+
+    // Logged-in user -> Guest
+    if (previousUser.current && !user) {
+        setPrevChats([]);
+        setReply(null);
+        setPrompt("");
+        setNewChat(true);
+    }
+
+    previousUser.current = user;
+
 }, [user]);
     //append new chat to prevChats
     useEffect(() => {
