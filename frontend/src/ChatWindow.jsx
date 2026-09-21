@@ -118,14 +118,6 @@ function ChatWindow() {
             {/* ================= NAVBAR ================= */}
 
             <div className="navbar">
-                 <button
-        className="mobileMenuBtn"
-        onClick={() => {
-            window.dispatchEvent(new Event("openSidebar"));
-        }}
-    >
-        <i className="fa-solid fa-bars"></i>
-    </button>
                 {/* Nexa AI */}
                 <span className="nexaTitle">
                     Nexa AI
