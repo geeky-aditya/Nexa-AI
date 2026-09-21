@@ -13,225 +13,103 @@ body{
   display: flex;
 }
 /* =========================================================
-   NEXA AI - MOBILE RESPONSIVE
-   OPTION 2
-   ========================================================= */
-
-
-/* Hidden on desktop */
-.mobileMenuBtn {
-    display: none;
-}
-
-.mobileCloseBtn {
-    display: none;
-}
-
-
-/* =========================================================
-   MOBILE ONLY
+   NEXA AI - MOBILE RESPONSIVE FIX
    ========================================================= */
 
 @media (max-width: 768px) {
 
-
-    /* =========================
-       CHAT WINDOW
-       ========================= */
+    /* ---------- Main chat ---------- */
 
     .chatWindow {
-        width: 100%;
-        min-width: 0;
+        width: 100% !important;
+        min-width: 0 !important;
         overflow: hidden;
     }
 
 
-    /* =========================
-       MOBILE MENU BUTTON
-       ========================= */
-
-    .mobileMenuBtn {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        width: 38px;
-        height: 38px;
-
-        margin: 10px;
-        padding: 0;
-
-        border: none;
-        background: transparent;
-
-        color: #b4b4b4;
-
-        font-size: 18px;
-
-        cursor: pointer;
-    }
-
-    .mobileMenuBtn:hover {
-        background-color: rgba(255, 255, 255, 0.08);
-    }
-
-
-    /* =========================
-       NAVBAR
-       ========================= */
-
-    .navbar {
-        width: 100%;
-        min-height: 60px;
-        box-sizing: border-box;
-    }
-
-    .nexaTitle {
-        margin: 1rem;
-        font-size: 16px;
-        white-space: nowrap;
-    }
-
-    .userIconDiv {
-        margin: 10px;
-        width: 36px;
-        height: 36px;
-    }
-
-    .userIcon {
-        width: 36px;
-        height: 36px;
-    }
-
-
-    /* =========================
-       SIDEBAR
-       ========================= */
-
-    .sidebar {
-        position: fixed;
-
-        top: 0;
-        left: 0;
-
-        width: 280px;
-        min-width: 280px;
-
-        height: 100vh;
-
-        z-index: 2000;
-
-        transform: translateX(-100%);
-
-        transition: transform 0.3s ease;
-
-        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .sidebar.mobileOpen {
-        transform: translateX(0);
-    }
-
-
-    /* =========================
-       SIDEBAR CLOSE BUTTON
-       ========================= */
-
-    .mobileCloseBtn {
-        display: flex;
-
-        position: absolute;
-
-        top: 10px;
-        right: 10px;
-
-        width: 35px;
-        height: 35px;
-
-        margin: 0;
-        padding: 0;
-
-        align-items: center;
-        justify-content: center;
-
-        border: none;
-
-        background: transparent;
-
-        color: #b4b4b4;
-
-        font-size: 18px;
-
-        cursor: pointer;
-
-        z-index: 10;
-    }
-
-    .mobileCloseBtn:hover {
-        background-color: rgba(255, 255, 255, 0.08);
-        color: white;
-    }
-
-
-    /* =========================
-       CHAT AREA
-       ========================= */
+    /* ---------- Chat history ---------- */
 
     .chats {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: none !important;
 
-        box-sizing: border-box;
+        padding: 4rem 12px !important;
 
-        padding: 4rem 12px;
+        box-sizing: border-box !important;
 
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        overflow-y: auto;
     }
+
+
+    /* ---------- User message ---------- */
 
     .userDiv {
-        width: 100%;
+        width: 100% !important;
+
+        display: flex !important;
+        justify-content: flex-end !important;
 
         box-sizing: border-box;
-
-        display: flex;
-
-        justify-content: flex-end;
-    }
-
-    .gptDiv {
-        width: 100%;
-
-        box-sizing: border-box;
-
-        font-size: 14px;
-
-        overflow-wrap: break-word;
-        word-wrap: break-word;
     }
 
     .userMessage {
-        margin-left: 0;
+        margin-left: 0 !important;
 
-        max-width: 80%;
+        max-width: 80% !important;
 
-        padding: 10px 14px;
+        width: fit-content !important;
 
-        font-size: 14px;
+        padding: 10px 14px !important;
 
         box-sizing: border-box;
 
         overflow-wrap: break-word;
-        word-wrap: break-word;
+        word-break: break-word;
     }
 
 
-    /* =========================
-       WELCOME
-       ========================= */
+    /* ---------- AI response ---------- */
+
+    .gptDiv {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+
+        text-align: left;
+
+        font-size: 14px;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+
+    /* ---------- Code blocks ---------- */
+
+    .gptDiv pre {
+        max-width: 100% !important;
+
+        overflow-x: auto;
+
+        box-sizing: border-box;
+    }
+
+    .gptDiv .hljs {
+        max-width: 100% !important;
+
+        overflow-x: auto;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ---------- Welcome ---------- */
 
     .welcome {
-        width: 100%;
+        width: 100% !important;
 
         padding: 0 20px;
 
@@ -247,12 +125,10 @@ body{
     }
 
 
-    /* =========================
-       CHAT INPUT
-       ========================= */
+    /* ---------- Input ---------- */
 
     .chatInput {
-        width: 100%;
+        width: 100% !important;
 
         padding: 0 10px;
 
@@ -260,14 +136,15 @@ body{
     }
 
     .inputBox {
-        width: 100%;
-        max-width: none;
+        width: 100% !important;
+
+        max-width: none !important;
 
         box-sizing: border-box;
     }
 
     .inputBox input {
-        width: 100%;
+        width: 100% !important;
 
         box-sizing: border-box;
 
@@ -282,33 +159,42 @@ body{
 
     .info {
         font-size: 11px;
-
         padding: 6px;
     }
 
 
-    /* =========================
-       SIDEBAR HISTORY
-       ========================= */
+    /* ---------- Navbar ---------- */
 
-    .history {
-        overflow-x: hidden;
+    .navbar {
+        width: 100% !important;
+
+        min-height: 60px;
+
+        box-sizing: border-box;
     }
 
-    .history li {
-        font-size: 13px;
+    .nexaTitle {
+        margin: 1rem;
 
-        overflow: hidden;
-
-        text-overflow: ellipsis;
+        font-size: 16px;
 
         white-space: nowrap;
     }
 
+    .userIconDiv {
+        margin: 10px;
 
-    /* =========================
-       AUTH POPUPS
-       ========================= */
+        width: 36px;
+        height: 36px;
+    }
+
+    .userIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* ---------- Auth popup ---------- */
 
     .authOverlay {
         padding: 16px;
@@ -317,9 +203,9 @@ body{
     }
 
     .authCard {
-        width: 100%;
+        width: 100% !important;
 
-        max-width: 100%;
+        max-width: 100% !important;
 
         padding: 24px 18px;
 
@@ -337,26 +223,4 @@ body{
     .formGroup input {
         padding: 11px 12px;
     }
-
-
-    /* =========================
-       CODE BLOCKS
-       ========================= */
-
-    pre {
-        max-width: 100%;
-
-        overflow-x: auto;
-
-        box-sizing: border-box;
-    }
-
-    .hljs {
-        max-width: 100%;
-
-        overflow-x: auto;
-
-        box-sizing: border-box;
-    }
-
 }
