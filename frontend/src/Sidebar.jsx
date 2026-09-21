@@ -1,10 +1,11 @@
 import "./Sidebar.css";
 import logo from "./assets/logo.png";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect,useState } from "react";
 import { MyContext } from "./MyContext";
 import { AuthContext } from "./AuthContext";
 import {v1 as uuidv1} from "uuid";
 function Sidebar(){
+    const [mobileOpen, setMobileOpen] = useState(false);
    const {allThreads, setAllThreads, currThreadId, setNewChat, setPrompt, setReply, setCurrThreadId, setPrevChats} = useContext(MyContext);
    const { token } = useContext(AuthContext);
 
@@ -24,7 +25,19 @@ function Sidebar(){
             console.log(err);
         }
     }
+    useEffect(() => {
 
+    const openSidebar = () => {
+        setMobileOpen(true);
+    };
+
+    window.addEventListener("openSidebar", openSidebar);
+
+    return () => {
+        window.removeEventListener("openSidebar", openSidebar);
+    };
+
+}, []);
     // 
     useEffect(()=>{
     if(token){
@@ -86,7 +99,13 @@ function Sidebar(){
 
 
     return(
-        <section className="sidebar">
+        <section className={`sidebar ${mobileOpen ? "mobileOpen" : ""}`}>
+            <button
+    className="mobileCloseBtn"
+    onClick={() => setMobileOpen(false)}
+>
+    <i className="fa-solid fa-xmark"></i>
+</button>
             <button onClick={createNewChat}>
                 <img src={logo} alt="Nexa Logo" className="logo"></img>
                 <span><i className="fa-solid fa-pen-to-square"></i></span>

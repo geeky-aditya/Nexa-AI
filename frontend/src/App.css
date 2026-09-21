@@ -12,3 +12,351 @@ body{
   background-color:#212121;
   display: flex;
 }
+/* =========================================================
+   NEXA AI - MOBILE RESPONSIVE
+   OPTION 2
+   ========================================================= */
+
+
+/* Hidden on desktop */
+.mobileMenuBtn {
+    display: none;
+}
+
+.mobileCloseBtn {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE ONLY
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* =========================
+       CHAT WINDOW
+       ========================= */
+
+    .chatWindow {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       MOBILE MENU BUTTON
+       ========================= */
+
+    .mobileMenuBtn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 38px;
+        height: 38px;
+
+        margin: 10px;
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        color: #b4b4b4;
+
+        font-size: 18px;
+
+        cursor: pointer;
+    }
+
+    .mobileMenuBtn:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+
+    /* =========================
+       NAVBAR
+       ========================= */
+
+    .navbar {
+        width: 100%;
+        min-height: 60px;
+        box-sizing: border-box;
+    }
+
+    .nexaTitle {
+        margin: 1rem;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .userIconDiv {
+        margin: 10px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .userIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* =========================
+       SIDEBAR
+       ========================= */
+
+    .sidebar {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 280px;
+        min-width: 280px;
+
+        height: 100vh;
+
+        z-index: 2000;
+
+        transform: translateX(-100%);
+
+        transition: transform 0.3s ease;
+
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .sidebar.mobileOpen {
+        transform: translateX(0);
+    }
+
+
+    /* =========================
+       SIDEBAR CLOSE BUTTON
+       ========================= */
+
+    .mobileCloseBtn {
+        display: flex;
+
+        position: absolute;
+
+        top: 10px;
+        right: 10px;
+
+        width: 35px;
+        height: 35px;
+
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+
+        background: transparent;
+
+        color: #b4b4b4;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        z-index: 10;
+    }
+
+    .mobileCloseBtn:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: white;
+    }
+
+
+    /* =========================
+       CHAT AREA
+       ========================= */
+
+    .chats {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 4rem 12px;
+
+        overflow-x: hidden;
+    }
+
+    .userDiv {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        justify-content: flex-end;
+    }
+
+    .gptDiv {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        font-size: 14px;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .userMessage {
+        margin-left: 0;
+
+        max-width: 80%;
+
+        padding: 10px 14px;
+
+        font-size: 14px;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    /* =========================
+       WELCOME
+       ========================= */
+
+    .welcome {
+        width: 100%;
+
+        padding: 0 20px;
+
+        box-sizing: border-box;
+    }
+
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       CHAT INPUT
+       ========================= */
+
+    .chatInput {
+        width: 100%;
+
+        padding: 0 10px;
+
+        box-sizing: border-box;
+    }
+
+    .inputBox {
+        width: 100%;
+        max-width: none;
+
+        box-sizing: border-box;
+    }
+
+    .inputBox input {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 16px 50px 16px 16px;
+
+        font-size: 14px;
+    }
+
+    #submit {
+        right: 12px;
+    }
+
+    .info {
+        font-size: 11px;
+
+        padding: 6px;
+    }
+
+
+    /* =========================
+       SIDEBAR HISTORY
+       ========================= */
+
+    .history {
+        overflow-x: hidden;
+    }
+
+    .history li {
+        font-size: 13px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       AUTH POPUPS
+       ========================= */
+
+    .authOverlay {
+        padding: 16px;
+
+        box-sizing: border-box;
+    }
+
+    .authCard {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 24px 18px;
+
+        box-sizing: border-box;
+    }
+
+    .authHeader h2 {
+        font-size: 22px;
+    }
+
+    .authHeader p {
+        font-size: 13px;
+    }
+
+    .formGroup input {
+        padding: 11px 12px;
+    }
+
+
+    /* =========================
+       CODE BLOCKS
+       ========================= */
+
+    pre {
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        box-sizing: border-box;
+    }
+
+    .hljs {
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        box-sizing: border-box;
+    }
+
+}
