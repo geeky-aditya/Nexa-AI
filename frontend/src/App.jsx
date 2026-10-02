@@ -1,5 +1,6 @@
 import './App.css'
 import Sidebar from "./Sidebar.jsx"
+import Mobile from "./Mobile.jsx";
 import ChatWindow from "./ChatWindow.jsx";
 import { MyContext } from './MyContext.jsx';
 import { AuthProvider } from "./AuthContext.jsx";
@@ -26,6 +27,7 @@ function App() {
       <MyContext.Provider value = {providerValues}>
       <Sidebar></Sidebar>
       <ChatWindow></ChatWindow>
+      <Mobile />
       </MyContext.Provider>
     </div>
     </AuthProvider>
