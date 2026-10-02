@@ -43,7 +43,7 @@ Nexa AI is a full-stack AI chatbot application built using the **MERN stack** an
 - Git
 - GitHub
 - VS Code
-- Postman
+- Thunder Client
 
 ## 📂 Project Structure
 
